@@ -1,6 +1,6 @@
 import { createSignal } from "solid-js";
-import * as gambar from "../assets/images";
-import * as datas from "../assets/js/data";
+import {logoNav,} from "../assets/images";
+import {navLinks} from "../assets/js/data";
 
 export default function Header(props) {
   const [isActive, setActive] = createSignal(false);
@@ -13,14 +13,14 @@ export default function Header(props) {
       >
         <div className="container">
           <a href="#" className="logo">
-            <img src={gambar.logoNav} alt="UTC logo" />
+            <img src={logoNav} alt="UTC logo" />
           </a>
 
           <nav className={`navbar ${isActive() ? "active" : ""}`} data-navbar>
             <div className="wrapper">
               <a href="#" className="logo">
                 <img
-                  src={gambar.logoNav}
+                  src={logoNav}
                   width="162"
                   height="50"
                   alt="UTC logo"
@@ -37,7 +37,7 @@ export default function Header(props) {
               </button>
             </div>
             <ul className="navbar-list">
-              {datas.navLinks.map((item, index) => (
+              {navLinks.map((item, index) => (
                 <li className="navbar-item" key={index} onClick={() => setActive(!isActive())}>
                   <a
                     href={`#${item.href}`}
