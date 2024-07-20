@@ -1,5 +1,6 @@
 import { createSignal, createEffect } from 'solid-js'
 import { Header, Main, Footer } from "./components";
+import { chevronUp } from './assets/images';
 
 function App() {
   const [scrollY, setScrollY] = createSignal(0)
@@ -26,11 +27,11 @@ function App() {
 
       <a
         href="#top"
-        className={`back-top-btn ${scrollY() > 100 && "active"}`}
+        class={`back-top-btn ${scrollY() > 100 && "active"}`}
         aria-label="back top top"
         data-back-top-btn
       >
-        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+       <div class="ion-icon" style={`mask-image: url(${chevronUp})`} aria-hidden="true"></div>
       </a>
     </>
   );

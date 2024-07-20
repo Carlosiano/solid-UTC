@@ -1,77 +1,77 @@
-import * as gambar from "../assets/images";
+import { arrowForwardOutline, footerBg, logoFacebook, logoFooter, logoInstagram, logoLinkedin, logoTwitter, logoYoutube } from "../assets/images";
 
 export default function Footer() {
   return (
     <>
       <footer
-        className="footer"
-        style={`background-image: url(${gambar.footerBg})`}
+        class="footer"
+        style={`background-image: url(${footerBg})`}
       >
-        <div className="footer-top section">
-          <div className="container grid-list">
-            <div className="footer-brand">
-              <a href="#" className="logo">
+        <div class="footer-top section">
+          <div class="container grid-list">
+            <div class="footer-brand">
+              <a href="#" class="logo">
                 <img
-                  src={gambar.logoFooter}
+                  src={logoFooter}
                   width="162"
                   height="50"
                   alt="UTC logo"
                 />
               </a>
 
-              <p className="footer-brand-text">
+              <p class="footer-brand-text">
                 Alamat Kampus: Jl. Ring Road Utara, Condong Catur, Sleman,
                 Yogyakarta
               </p>
 
-              <div className="wrapper">
-                <span className="span">Add:</span>
+              <div class="wrapper">
+                <span class="span">Add:</span>
 
-                <address className="address">70-80 Upper St Norwich NR2</address>
+                <address class="address">70-80 Upper St Norwich NR2</address>
               </div>
 
-              <div className="wrapper">
-                <span className="span">Call:</span>
+              <div class="wrapper">
+                <span class="span">Call:</span>
 
-                <a href="tel:+011234567890" className="footer-link">
+                <a href="tel:+011234567890" class="footer-link">
                   +01 123 4567 890
                 </a>
               </div>
 
-              <div className="wrapper">
-                <span className="span">Email:</span>
+              <div class="wrapper">
+                <span class="span">Email:</span>
 
-                <a href="mailto:info@utc.com" className="footer-link">
+                <a href="mailto:info@utc.com" class="footer-link">
                   info@utc.com
                 </a>
               </div>
             </div>
 
-            <ul className="footer-list">
+            <ul class="footer-list">
               <li>
-                <p className="footer-list-title">Profil</p>
+                <p class="footer-list-title">Profil</p>
               </li>
 
               <li>
-                <a href="#" className="footer-link">
+                <a href="#" class="footer-link">
                   Tentang UTC
                 </a>
               </li>
 
               <li>
-                <a href="#" className="footer-link">
+                <a href="#" class="footer-link">
                   Sejarah
                 </a>
               </li>
 
               <li>
-                <a href="#" className="footer-link">
+                <a href="#" class="footer-link">
                   Visi Misi
                 </a>
               </li>
 
               <li>
-                <a href="#" className="footer-link">
+                <a href="#" class="footer-link">
                   Sambutan Rektor
                 </a>
               </li>
@@ -79,82 +79,83 @@ export default function Footer() {
               <li></li>
             </ul>
 
-            <ul className="footer-list">
+            <ul class="footer-list">
               <li>
-                <p className="footer-list-title">Pendaftaran</p>
+                <p class="footer-list-title">Pendaftaran</p>
               </li>
 
               <li>
-                <a href="#" className="footer-link">
+                <a href="#" class="footer-link">
                   Reguler & Internasional
                 </a>
               </li>
 
               <li>
-                <a href="#" className="footer-link">
+                <a href="#" class="footer-link">
                   Alih Jalur
                 </a>
               </li>
 
               <li>
-                <a href="#" className="footer-link">
+                <a href="#" class="footer-link">
                   Biaya Kuliah
                 </a>
               </li>
             </ul>
 
-            <div className="footer-list">
-              <p className="footer-list-title">Tanya Kami</p>
+            <div class="footer-list">
+              <p class="footer-list-title">Tanya Kami</p>
 
-              <p className="footer-list-text">Masukkan alamat email Anda</p>
+              <p class="footer-list-text">Masukkan alamat email Anda</p>
 
-              <form action="" className="newsletter-form">
+              <form action="" class="newsletter-form">
                 <input
                   type="email"
                   name="email_address"
                   placeholder="Email Anda"
                   required
-                  className="input-field"
+                  class="input-field"
                 />
 
-                <button type="submit" className="btn has-before">
-                  <span className="span">Kirim</span>
+                <button type="submit" class="btn has-before">
+                  <span class="span">Kirim</span>
 
-                  <ion-icon
-                    name="arrow-forward-outline"
-                    aria-hidden="true"
-                  ></ion-icon>
+                    <div
+                      class="ion-icon"
+                      style={`mask-image: url(${arrowForwardOutline})`}
+                      aria-hidden="true"
+                    ></div>
                 </button>
               </form>
 
-              <ul className="social-list">
+              <ul class="social-list">
                 <li>
-                  <a href="#" className="social-link">
-                    <ion-icon name="logo-facebook"></ion-icon>
+                  <a href="#" class="social-link">
+                    <div class="ion-icon" style={`mask-image: url(${logoFacebook})`}></div>
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="social-link">
-                    <ion-icon name="logo-linkedin"></ion-icon>
+                  <a href="#" class="social-link">
+                    <div class="ion-icon" style={`mask-image: url(${logoLinkedin})`}></div>
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="social-link">
-                    <ion-icon name="logo-instagram"></ion-icon>
+                  <a href="#" class="social-link">
+                    <div class="ion-icon" style={`mask-image: url(${logoInstagram})`}></div>
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="social-link">
-                    <ion-icon name="logo-twitter"></ion-icon>
+                  <a href="#" class="social-link">
+                    <div class="ion-icon" style={`mask-image: url(${logoTwitter})`}></div>
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="social-link">
-                    <ion-icon name="logo-youtube"></ion-icon>
+                  <a href="#" class="social-link">
+                    <div class="ion-icon" style={`mask-image: url(${logoYoutube})`}></div>
                   </a>
                 </li>
               </ul>
@@ -162,9 +163,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer-bottom">
-          <div className="container">
-            <p className="copyright">
+        <div class="footer-bottom">
+          <div class="container">
+            <p class="copyright">
               Copyright 2023 Universitas Teknologi Condongcatur
             </p>
           </div>

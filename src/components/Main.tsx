@@ -1,5 +1,5 @@
-import * as gambar from "../assets/images";
-import * as datas from "../assets/js/data";
+import { aboutBanner, aboutShape1, aboutShape2, aboutShape3, aboutShape4, arrowForwardOutline, blogBg, blogShape, checkmarkDoneOutline, heroBanner1, heroBanner2, heroBg, heroShape2, play, videoBanner, videoBg, videoShape1, videoShape2 } from "../assets/images";
+import { alasanKuliah, categories, fasilitas, infoPMB, kampus } from "../assets/js/data";
 
 export default function Main() {
   return (
@@ -9,72 +9,73 @@ export default function Main() {
           {/* - #HERO */}
 
           <section
-            className="section hero has-bg-image"
+            class="section hero has-bg-image"
             id="home"
             aria-label="home"
-            style={`background-image: url(${gambar.heroBg})` }
+            style={`background-image: url(${heroBg})`}
           >
-            <div className="container">
-              <div className="hero-content">
-                <h1 className="h1 section-title">
-                  Masa depan <span className="span">cerah</span> Anda adalah
-                  misi kami
+            <div class="container">
+              <div class="hero-content">
+                <h1 class="h1 section-title">
+                  Masa depan <span class="span">cerah</span> Anda adalah misi
+                  kami
                 </h1>
 
-                <p className="hero-text">
+                <p class="hero-text">
                   Excepteur sint occaecat cupidatat non proident sunt in culpa
                   qui officia deserunt mollit.
                 </p>
 
-                <div style="display: flex; gap: 1rem" >
-                  <a href="#" className="btn has-before">
-                    <span className="span">Daftar Sekarang</span>
+                <div style="display: flex; gap: 1rem">
+                  <a href="#" class="btn has-before">
+                    <span class="span">Daftar Sekarang</span>
                   </a>
 
-                  <a href="#" className="btn-second has-before">
-                    <span className="span">Panduan PMB</span>
+                  <a href="#" class="btn-second has-before">
+                    <span class="span">Panduan PMB</span>
 
-                    <ion-icon
-                      name="arrow-forward-outline"
+                    <div
+                      class="ion-icon"
+                      style={`mask-image: url(${arrowForwardOutline})`}
                       aria-hidden="true"
-                    ></ion-icon>
+                    ></div>
                   </a>
                 </div>
               </div>
 
-              <figure className="hero-banner">
+              <figure class="hero-banner">
                 <div
-                  className="img-holder one"
-                  style={{"--width": 270, "--height": 300 }}
+                  class="img-holder one"
+                  style={{ "--width": 270, "--height": 300 }}
                 >
                   <img
-                    src={gambar.heroBanner1}
+                    src={heroBanner1}
                     width="270"
                     height="300"
                     alt="hero banner"
-                    className="img-cover"
+                    class="img-cover"
                   />
                 </div>
 
                 <div
-                  className="img-holder two"
-                  style={{"--width": 240, "--height": 370}}
+                  class="img-holder two"
+                  style={{ "--width": 240, "--height": 370 }}
                 >
                   <img
-                    src={gambar.heroBanner2}
+                    src={heroBanner2}
                     width="240"
                     height="370"
                     alt="hero banner"
-                    className="img-cover"
+                    class="img-cover"
                   />
                 </div>
 
                 <img
-                  src={gambar.heroShape2}
+                  src={heroShape2}
                   width="622"
                   height="551"
                   alt=""
-                  className="shape hero-shape-2"
+                  class="shape hero-shape-2"
                 />
               </figure>
             </div>
@@ -82,77 +83,73 @@ export default function Main() {
 
           {/* - #CATEGORY */}
 
-          <section
-            className="section category"
-            id="jenjang"
-            aria-label="category"
-          >
-            <div className="container">
-              <p className="section-subtitle">Pilihan Jenjang Pendidikan</p>
+          <section class="section category" id="jenjang" aria-label="category">
+            <div class="container">
+              <p class="section-subtitle">Pilihan Jenjang Pendidikan</p>
 
-              <h2 className="h2 section-title">
-                Fakultas Ilmu Komputer <span className="span">(FIK)</span>
+              <h2 class="h2 section-title">
+                Fakultas Ilmu Komputer <span class="span">(FIK)</span>
               </h2>
 
-              <p className="section-text">Program Sarjana (S1)</p>
+              <p class="section-text">Program Sarjana (S1)</p>
 
-              <ul className="grid-list">
-                {datas.categories[0].map((item, index) => (
-                  <li key={index}>
+              <ul class="grid-list">
+                {categories[0].map((item) => (
+                  <li>
                     <div
-                      className="category-card"
+                      class="category-card"
                       style={`--color: ${item.color[0]}, ${item.color[1]}%, ${item.color[2]}%`}
                     >
-                      <div className="card-icon">
+                      <div class="card-icon">
                         <img
                           src={item.img}
                           width="40"
                           height="40"
                           loading="lazy"
                           alt={item.title}
-                          className="img"
+                          class="img"
                         />
                       </div>
 
-                      <h3 className="h3">
-                        <a href="#" className="card-title">
+                      <h3 class="h3">
+                        <a href="#" class="card-title">
                           {item.title}
                         </a>
                       </h3>
 
-                      <p className="card-text">{item.desc}</p>
+                      <p class="card-text">{item.desc}</p>
                     </div>
                   </li>
                 ))}
               </ul>
 
-              <p className="section-text">Program Diploma (D3)</p>
+              <p class="section-text">Program Diploma (D3)</p>
 
-              <ul className="grid-list">
-                {datas.categories[0].map((item, index) => (
-                  <li key={index}>
+              <ul class="grid-list">
+                {categories[0].map((item) => (
+                  <li>
                     <div
-                      className="category-card"
+                      class="category-card"
                       style={`--color: ${item.color[0]}, ${item.color[1]}%, ${item.color[2]}%`}
                     >
-                      <div className="card-icon">
+                      <div class="card-icon">
                         <img
                           src={item.img}
                           width="40"
                           height="40"
                           loading="lazy"
                           alt={item.title}
-                          className="img"
+                          class="img"
                         />
                       </div>
 
-                      <h3 className="h3">
-                        <a href="#" className="card-title">
+                      <h3 class="h3">
+                        <a href="#" class="card-title">
                           {item.title}
                         </a>
                       </h3>
 
-                      <p className="card-text">{item.desc}</p>
+                      <p class="card-text">{item.desc}</p>
                     </div>
                   </li>
                 ))}
@@ -162,156 +159,80 @@ export default function Main() {
 
           {/* - #ABOUT */}
 
-          <section className="section about" id="why" aria-label="about">
-            <div className="container">
-              <figure className="about-banner">
+          <section class="section about" id="why" aria-label="about">
+            <div class="container">
+              <figure class="about-banner">
                 <div
-                  className="img-holder"
-                  style={{"--width": 520, "--height": 370}}
+                  class="img-holder"
+                  style={{ "--width": 520, "--height": 370 }}
                 >
                   <img
-                    src={gambar.aboutBanner}
+                    src={aboutBanner}
                     width="520"
                     height="370"
                     loading="lazy"
                     alt="about banner"
-                    className="img-cover"
+                    class="img-cover"
                   />
                 </div>
 
                 <img
-                  src={gambar.aboutShape1}
+                  src={aboutShape1}
                   width="360"
                   height="420"
                   loading="lazy"
                   alt=""
-                  className="shape about-shape-1"
+                  class="shape about-shape-1"
                 />
 
                 <img
-                  src={gambar.aboutShape2}
+                  src={aboutShape2}
                   width="371"
                   height="220"
                   loading="lazy"
                   alt=""
-                  className="shape about-shape-2"
+                  class="shape about-shape-2"
                 />
 
                 <img
-                  src={gambar.aboutShape3}
+                  src={aboutShape3}
                   width="722"
                   height="528"
                   loading="lazy"
                   alt=""
-                  className="shape about-shape-3"
+                  class="shape about-shape-3"
                 />
               </figure>
 
-              <div className="about-content">
-                <p className="section-subtitle">Why?</p>
+              <div class="about-content">
+                <p class="section-subtitle">Why?</p>
 
-                <h2 className="h2 section-title">
-                  Alasan <span className="span">Mengapa</span> Kuliah di UTC?
+                <h2 class="h2 section-title">
+                  Alasan <span class="span">Mengapa</span> Kuliah di UTC?
                 </h2>
 
-                <p className="section-text"></p>
+                <p class="section-text"></p>
 
-                <ul className="about-list">
-                  <li className="about-item">
-                    <ion-icon
-                      name="checkmark-done-outline"
-                      aria-hidden="true"
-                    ></ion-icon>
-
-                    <span className="span">
-                      Peluang magang dan bekerja di Silicon Valley dan Hollywood
-                    </span>
-                  </li>
-
-                  <li className="about-item">
-                    <ion-icon
-                      name="checkmark-done-outline"
-                      aria-hidden="true"
-                    ></ion-icon>
-
-                    <span className="span">
-                      Perguruan Tingggi Terbaik di Indonesia pada Industrial
-                      Application (WURI, 2023).
-                    </span>
-                  </li>
-
-                  <li className="about-item">
-                    <ion-icon
-                      name="checkmark-done-outline"
-                      aria-hidden="true"
-                    ></ion-icon>
-
-                    <span className="span">
-                      Model Perguruan Tinggi Private Entrepreneur Dunia oleh
-                      UNESCO
-                    </span>
-                  </li>
-                  <li className="about-item">
-                    <ion-icon
-                      name="checkmark-done-outline"
-                      aria-hidden="true"
-                    ></ion-icon>
-
-                    <span className="span">
-                      Alumni mudah mendapat pekerjaan (Employbility bintang 5
-                      dari QS Stars 2019)
-                    </span>
-                  </li>
-                  <li className="about-item">
-                    <ion-icon
-                      name="checkmark-done-outline"
-                      aria-hidden="true"
-                    ></ion-icon>
-
-                    <span className="span">
-                      Ditargetkan 30 % mahasiswa menjadi entrepreneur.
-                    </span>
-                  </li>
-                  <li className="about-item">
-                    <ion-icon
-                      name="checkmark-done-outline"
-                      aria-hidden="true"
-                    ></ion-icon>
-
-                    <span className="span">
-                      Menghasilkan produk berkualitas dunia dalam bidang film
-                      animasi, game dan ICT
-                    </span>
-                  </li>
-                  <li className="about-item">
-                    <ion-icon
-                      name="checkmark-done-outline"
-                      aria-hidden="true"
-                    ></ion-icon>
-
-                    <span className="span">
-                      Memperoleh lebih dari 80 penghargaan internasional
-                    </span>
-                  </li>
-                  <li className="about-item">
-                    <ion-icon
-                      name="checkmark-done-outline"
-                      aria-hidden="true"
-                    ></ion-icon>
-
-                    <span className="span">
-                      Memiliki sertifikasi ISO 9001 Quality Managemen
-                    </span>
-                  </li>
+                <ul class="about-list">
+                  {alasanKuliah.map((item) => (
+                    <li class="about-item">
+                      <div
+                        class="ion-icon"
+                        style={`mask-image: url(${checkmarkDoneOutline})`}
+                        aria-hidden="true"
+                      ></div>
+                      <span class="span">{item}</span>
+                    </li>
+                  ))}
                 </ul>
 
                 <img
-                  src={gambar.aboutShape4}
+                  src={aboutShape4}
                   width="100"
                   height="100"
                   loading="lazy"
                   alt=""
-                  className="shape about-shape-4"
+                  class="shape about-shape-4"
                 />
               </div>
             </div>
@@ -319,25 +240,19 @@ export default function Main() {
 
           {/* - #Fasilitas */}
 
-          <section
-            className="section course"
-            id="fasilitas"
-            aria-label="course"
-          >
-            <div className="container">
-              <p className="section-subtitle">Fasilitas Kampus</p>
+          <section class="section course" id="fasilitas" aria-label="course">
+            <div class="container">
+              <p class="section-subtitle">Fasilitas Kampus</p>
 
-              <h2 className="h2 section-title">
-                Nikmati fasilitas yang tersedia
-              </h2>
+              <h2 class="h2 section-title">Nikmati fasilitas yang tersedia</h2>
 
-              <ul className="grid-list">
-                {datas.fasilitas.map((item, index) => (
-                  <li key={index}>
-                    <div className="course-card">
+              <ul class="grid-list">
+                {fasilitas.map((item) => (
+                  <li>
+                    <div class="course-card">
                       <figure
-                        className="card-banner img-holder"
-                        style={{"--width" : 370, "--height" : 220}}
+                        class="card-banner img-holder"
+                        style={{ "--width": 370, "--height": 220 }}
                       >
                         <img
                           src={item.img}
@@ -345,14 +260,14 @@ export default function Main() {
                           height="220"
                           loading="lazy"
                           alt="Build Responsive Real- World Websites with HTML and CSS"
-                          className="img-cover"
+                          class="img-cover"
                         />
                       </figure>
-                      <div className="card-content">
-                        <span className="badge">{item.title}</span>
+                      <div class="card-content">
+                        <span class="badge">{item.title}</span>
 
-                        <h3 className="h3">
-                          <a href="#" className="card-title-fasilitas">
+                        <h3 class="h3">
+                          <a href="#" class="card-title-fasilitas">
                             {item.desc}
                           </a>
                         </h3>
@@ -362,35 +277,37 @@ export default function Main() {
                 ))}
               </ul>
 
-              <a href="#" className="btn has-before">
-                <span className="span">Lihat lebih banyak</span>
-                <ion-icon
-                  name="arrow-forward-outline"
+              <a href="#" class="btn has-before">
+                <span class="span">Lihat lebih banyak</span>
+                <div
+                  class="ion-icon"
+                  style={`mask-image: url(${arrowForwardOutline})`}
                   aria-hidden="true"
-                ></ion-icon>
+                ></div>
               </a>
             </div>
           </section>
 
           {/* INFO PMB */}
 
-          <section className="section course" id="info" aria-label="course">
-            <div className="container">
-              <p className="section-subtitle">Info PMB</p>
-              <h2 className="h2 section-title">Informasi seputar PMB</h2>
-              <ul className="grid-list">
-                {datas.infoPMB.map((item, index) => (
-                  <li style="padding-top: 100px" key={index}>
-                    <div className="blog-card">
-                      <div className="card-content">
-                        <a href="#" className="card-btn" aria-label="read more">
-                          <ion-icon
-                            name="arrow-forward-outline"
+          <section class="section course" id="info" aria-label="course">
+            <div class="container">
+              <p class="section-subtitle">Info PMB</p>
+              <h2 class="h2 section-title">Informasi seputar PMB</h2>
+              <ul class="grid-list">
+                {infoPMB.map((item) => (
+                  <li style="padding-top: 100px">
+                    <div class="blog-card">
+                      <div class="card-content">
+                        <a href="#" class="card-btn" aria-label="read more">
+                          <div
+                            class="ion-icon"
+                            style={`mask-image: url(${arrowForwardOutline})`}
                             aria-hidden="true"
-                          ></ion-icon>
+                          ></div>
                         </a>
-                        <h3 className="h3">
-                          <a href="#" className="card-title">
+                        <h3 class="h3">
+                          <a href="#" class="card-title">
                             {item}
                           </a>
                         </h3>
@@ -399,11 +316,12 @@ export default function Main() {
                   </li>
                 ))}
               </ul>
-              <a href="#" className="btn-second has-before">
-                <ion-icon
-                  name="arrow-forward-outline"
+              <a href="#" class="btn-second has-before">
+                <div
+                  class="ion-icon"
+                  style={`mask-image: url(${arrowForwardOutline})`}
                   aria-hidden="true"
-                ></ion-icon>
+                ></div>
               </a>
             </div>
           </section>
@@ -411,46 +329,50 @@ export default function Main() {
           {/* - #VIDEO */}
 
           <section
-            className="video has-bg-image"
+            class="video has-bg-image"
             aria-label="video"
-            style={ `background-image: url(${gambar.videoBg})` }
+            style={`background-image: url(${videoBg})`}
           >
-            <div className="container">
-              <div className="video-card">
+            <div class="container">
+              <div class="video-card">
                 <div
-                  className="video-banner img-holder has-after"
-                  style={{"--width" : ' ', "--height" : ' ' }}
+                  class="video-banner img-holder has-after"
+                  style={{ "--width": " ", "--height": " " }}
                 >
                   <img
-                    src={gambar.videoBanner}
+                    src={videoBanner}
                     width="970"
                     height="550"
                     loading="lazy"
                     alt="video banner"
-                    className="img-cover"
+                    class="img-cover"
                   />
 
-                  <button className="play-btn" aria-label="play video">
-                    <ion-icon name="play" aria-hidden="true"></ion-icon>
+                  <button class="play-btn" aria-label="play video">
+                    <div
+                      class="ion-icon"
+                      style={`mask-image: url(${play})`}
+                      aria-hidden="true"
+                    ></div>
                   </button>
                 </div>
 
                 <img
-                  src={gambar.videoShape1}
+                  src={videoShape1}
                   width="1089"
                   height="605"
                   loading="lazy"
                   alt=""
-                  className="shape video-shape-1"
+                  class="shape video-shape-1"
                 />
 
                 <img
-                  src={gambar.videoShape2}
+                  src={videoShape2}
                   width="158"
                   height="174"
                   loading="lazy"
                   alt=""
-                  className="shape video-shape-2"
+                  class="shape video-shape-2"
                 />
               </div>
             </div>
@@ -459,51 +381,53 @@ export default function Main() {
           {/* - #BLOG */}
 
           <section
-            className="section blog has-bg-image"
+            class="section blog has-bg-image"
             id="blog"
             aria-label="blog"
-            style={`background-image: url(${gambar.blogBg})`}
+            style={`background-image: url(${blogBg})`}
           >
-            <div className="container">
-              <p className="section-subtitle">Kampus</p>
+            <div class="container">
+              <p class="section-subtitle">Kampus</p>
 
-              <h2 className="h2 section-title">Cabang Kampus</h2>
+              <h2 class="h2 section-title">Cabang Kampus</h2>
 
-              <ul className="grid-list">
-                {datas.kampus.map((item, index) => (
-                  <li key={index}>
-                    <div className="blog-card">
+              <ul class="grid-list">
+                {kampus.map((item) => (
+                  <li>
+                    <div class="blog-card">
                       <figure
-                        className="card-banner img-holder has-after"
-                        style={{"--width": 370, "--height": 370}}>
+                        class="card-banner img-holder has-after"
+                        style={{ "--width": 370, "--height": 370 }}
+                      >
                         <img
                           src={item.img}
                           width="370"
                           height="370"
                           loading="lazy"
                           alt="Become A Better Blogger: Content Planning"
-                          className="img-cover"
+                          class="img-cover"
                         />
                       </figure>
 
-                      <div className="card-content">
-                        <a href="#" className="card-btn" aria-label="read more">
-                          <ion-icon
-                            name="arrow-forward-outline"
+                      <div class="card-content">
+                        <a href="#" class="card-btn" aria-label="read more">
+                          <div
+                            class="ion-icon"
+                            style={`mask-image: url(${arrowForwardOutline})`}
                             aria-hidden="true"
-                          ></ion-icon>
+                          ></div>
                         </a>
 
-                        <a href="#" className="card-subtitle">
+                        <a href="#" class="card-subtitle">
                           {item.title}
                         </a>
 
-                        <h3 className="h3">
-                          <a href="#" className="card-title">
+                        <h3 class="h3">
+                          <a href="#" class="card-title">
                             {item.alamat}
                           </a>
                         </h3>
-                        <p className="card-text">{item.telp}</p>
+                        <p class="card-text">{item.telp}</p>
                       </div>
                     </div>
                   </li>
@@ -511,12 +435,12 @@ export default function Main() {
               </ul>
 
               <img
-                src={gambar.blogShape}
+                src={blogShape}
                 width="186"
                 height="186"
                 loading="lazy"
                 alt=""
-                className="shape blog-shape"
+                class="shape blog-shape"
               />
             </div>
           </section>
